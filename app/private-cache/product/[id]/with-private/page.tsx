@@ -10,13 +10,8 @@ import { ProductDetails } from '#/app/private-cache/_components/product-detail';
 import Link from 'next/link';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 
-// CRITICAL: This enables runtime prefetching!
-export const unstable_instant = {
-  prefetch: 'runtime',
-  samples: [
-    { params: { id: '1' }, cookies: [{ name: 'session-id', value: '1' }] },
-  ],
-};
+// Enable runtime prefetching for private cached content
+export const unstable_prefetch = 'force-runtime';
 
 export default async function Page({
   params,

@@ -94,7 +94,7 @@ export default function ProductLink({
   }
 
   return (
-    <Link href={href}>
+    <Link href={href} prefetch={privateCache ? true : undefined}>
       <Boundary
         label={label}
         size="small"
